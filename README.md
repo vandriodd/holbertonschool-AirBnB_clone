@@ -54,7 +54,15 @@ All of this is aimed at creating an abstraction between *"My object"* and *"How 
 * [Python test cheatsheet](https://www.pythonsheets.com/notes/python-tests.html)
 
 ## Requirements
-Placeholder
+* Ubuntu 20.04 LTS
+* Python3 version 3.8.5
+* Pycodestyle (PEP8) version 2.7
+* Use the [unittest module](https://docs.python.org/3.4/library/unittest.html#module-unittest)
+* Shell should work in both interactive and non-interactive mode
+* All tests should also pass in non-interactive mode: 
+```bash
+$ echo "python3 -m unittest discover tests" | bash
+```
 
 ## Files
 Placeholder
