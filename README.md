@@ -44,7 +44,14 @@ The main objective of this stage is to create a **storage system** through the d
 All of this is aimed at creating an abstraction between *"My object"* and *"How it is stored and persisted"*, which allows for efficient changes in storage types. The console included in this repository **serves as a tool to validate this storage engine.**
 
 ## Resources
-Placeholder
+* [cmd module](https://docs.python.org/3/library/cmd.html)
+* Python packages concept page, specifically [packages](https://docs.python.org/3.4/tutorial/modules.html#packages) and [circular import](https://www.stefaanlippens.net/circular-imports-type-hints-python.html)
+* Serialization/Deserialization
+* [uuid module](https://docs.python.org/3/library/uuid.html)
+* [datetime](https://docs.python.org/3/library/datetime.html)
+* [unittest module](https://docs.python.org/3/library/unittest.html)
+* [args/kwargs](https://yasoob.me/2013/08/04/args-and-kwargs-in-python-explained/)
+* [Python test cheatsheet](https://www.pythonsheets.com/notes/python-tests.html)
 
 ## Requirements
 Placeholder
