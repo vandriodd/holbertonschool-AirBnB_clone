@@ -59,10 +59,7 @@ All of this is aimed at creating an abstraction between *"My object"* and *"How 
 * Pycodestyle (PEP8) version 2.7
 * Use the [unittest module](https://docs.python.org/3.4/library/unittest.html#module-unittest)
 * Shell should work in both interactive and non-interactive mode
-* All tests should also pass in non-interactive mode: 
-```bash
-$ echo "python3 -m unittest discover tests" | bash
-```
+* All tests should also pass in non-interactive mode: `$ echo "python3 -m unittest discover tests" | bash`
 
 ## Files
 Placeholder
