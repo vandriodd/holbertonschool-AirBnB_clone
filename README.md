@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20230704%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20230704T172951Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=70931b241d2931a415e656ca6aed7da5eca542412c7ddce623808cd7a5979f77" alt="AirBnB" width=600 />
+<img src="https://github.com/vandriodd/holbertonschool-AirBnB_clone/assets/110431271/16e8dbdd-c2b9-46a8-ad80-2d0b8729618a" alt="AirBnB" width=600 />
 <h1> AirBnB clone: The console </h1>
 
 > This repository contains a command interpreter for manipulating [AirBnB](https://es.airbnb.com/) clone data.
@@ -26,7 +26,15 @@
 ## About 
 This project is about the initial phase of creating a simple and functional clone of the [AirBnB](https://es.airbnb.com/) website. Here is a clearer visualization of our position:
 
-[Placeholder]
+<br>
+
+<div align="center">
+
+<img src="https://github.com/vandriodd/holbertonschool-AirBnB_clone/assets/110431271/0bc71d0c-413e-48bb-8a20-528a5adbc7e8" alt="First step backend" width=700 />
+
+</div>
+
+<br>
 
 The main objective of this stage is to create a **storage system** through the development of a data model and a command interpreter where:
 
