@@ -24,7 +24,16 @@
 * [Authors](#authors)
 
 ## About 
-Placeholder
+This project is about the initial phase of creating a simple and functional clone of the [AirBnB](https://es.airbnb.com/) website. Here is a clearer visualization of our position:
+
+[Placeholder]
+
+The main objective of this stage is to create a **storage system** through the development of a data model and a command interpreter where:
+
+* Python objects will be managed.
+* These objects will be stored in a JSON file.
+
+All of this is aimed at creating an abstraction between *"My object"* and *"How it is stored and persisted"*, which allows for efficient changes in storage types. The console included in this repository **serves as a tool to validate this storage engine.**
 
 ## Resources
 Placeholder
