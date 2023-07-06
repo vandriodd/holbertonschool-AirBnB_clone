@@ -5,6 +5,7 @@
 
 from uuid import uuid4
 from datetime import datetime
+import models
 
 
 class BaseModel():
@@ -12,18 +13,20 @@ class BaseModel():
 
     def __init__(self, *args, **kwargs):
         """ Initializes an instance of BaseModel class """
-        self.id = str(uuid4())
-        self.created_at = datetime.now()
-        self.updated_at = datetime.now()
         if kwargs:
             for k, v in kwargs.items():
                 if k == "__class__":
-                    pass
+                    continue
                 elif k == "updated_at" or k == "created_at":
                     value = datetime.strptime(v, "%Y-%m-%dT%H:%M:%S.%f")
                     setattr(self, k, value)
                 else:
                     setattr(self, k, v)
+        else:
+            self.id = str(uuid4())
+            self.created_at = datetime.now()
+            self.updated_at = datetime.now()
+            models.storage.new(self)
 
     def __str__(self):
         """ Override the __str__ method so the print() function
@@ -34,6 +37,7 @@ class BaseModel():
     def save(self):
         """ Updates attribute updated_at with the current datetime """
         self.updated_at = datetime.now()
+        models.storage.save()
 
     def to_dict(self):
         """ Returns an instance in dict format """
