@@ -34,8 +34,6 @@ class FileStorage:
         from models.base_model import BaseModel
         if path.exists(self.__file_path):
             with open(self.__file_path, 'r', encoding='utf-8') as file:
-                print("read file")
                 instances = json.load(file)
-                print("instances: ")
-                for k, v in instances.items():
-                    self.__objects[k] = BaseModel(**v)
+            for k, v in instances.items():
+                self.__objects[k] = BaseModel(**v)
