@@ -6,12 +6,13 @@
 import cmd
 import models
 from models.base_model import BaseModel
+from models.user import User
 from models.engine.file_storage import FileStorage
 
 
 class HBNBCommand(cmd.Cmd):
     """ Class for console usage """
-    valid_classes = {"BaseModel": BaseModel}
+    valid_classes = {"BaseModel": BaseModel, "User": User}
     prompt = "(hbnb) "
 
     def do_quit(self, input):
