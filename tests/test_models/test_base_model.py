@@ -8,7 +8,7 @@ from models.base_model import BaseModel
 
 class test_base_model(unittest.TestCase):
     """ Tests BaseModel class """
-    pass
+    base_model = BaseModel()
 
 if __name__ == "__main__":
     unittest.main()
