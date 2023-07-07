@@ -15,12 +15,9 @@ class BaseModel():
         """ Initializes an instance of BaseModel class """
         if kwargs:
             for k, v in kwargs.items():
-                if k == "__class__":
-                    continue
-                elif k == "updated_at" or k == "created_at":
-                    value = datetime.strptime(v, "%Y-%m-%dT%H:%M:%S.%f")
-                    setattr(self, k, value)
-                else:
+                if k != "__class__":
+                    if k == "updated_at" or k == "created_at":
+                        v = datetime.strptime(v, "%Y-%m-%dT%H:%M:%S.%f")
                     setattr(self, k, v)
         else:
             self.id = str(uuid4())
