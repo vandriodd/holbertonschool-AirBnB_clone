@@ -64,6 +64,11 @@ class TestBaseModel(unittest.TestCase):
         str_rep = f"[{base6.__class__.__name__}] ({base6.id}) {base6.__dict__}"
         self.assertEqual(str_rep, base6.__str__())
 
+    def test_invalid_kwargs(self):
+        """ Check TypeError for invalid type of kwargs """
+        with self.assertRaises(TypeError):
+            base7 = BaseModel(**"invalid")
+
 
 if __name__ == '__main__':
     unittest.main()
