@@ -41,7 +41,7 @@ class HBNBCommand(cmd.Cmd):
         class_name = class_name.split()[0]
         if not class_name:
             print("** class name missing **")
-        if class_name not in HBNBCommand.valid_classes:
+        elif class_name not in HBNBCommand.valid_classes:
             print("** class doesn't exist **")
         else:
             new_ins = self.valid_classes[class_name]()
