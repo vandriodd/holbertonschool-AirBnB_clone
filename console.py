@@ -67,6 +67,7 @@ class HBNBCommand(cmd.Cmd):
             output = f"{args[0]}.{args[1]}"
             if output not in models.storage.all():
                 print("** no instance found **")
+                return
             else:
                 print(models.storage.all()[output])
 
@@ -86,6 +87,7 @@ class HBNBCommand(cmd.Cmd):
             output = f"{args[0]}.{args[1]}"
             if output not in models.storage.all():
                 print("** no instance found **")
+                return
             else:
                 del models.storage.all()[output]
                 models.storage.save()
@@ -113,14 +115,19 @@ class HBNBCommand(cmd.Cmd):
         args = input.split()
         if not args:
             print("** class name missing **")
+            return
         elif args[0] not in HBNBCommand.valid_classes:
             print("** class doesn't exist **")
+            return
         elif len(args) == 1:
             print("** instance id missing **")
+            return
         elif len(args) == 2:
             print("** attribute name missing **")
+            return
         elif len(args) == 3:
             print("** value missing **")
+            return
         else:
             class_name = args[0]
             obj_id = args[1]
@@ -133,6 +140,7 @@ class HBNBCommand(cmd.Cmd):
                 models.storage.save()
             else:
                 print("** no instance found **")
+                return
 
 
 if __name__ == '__main__':
