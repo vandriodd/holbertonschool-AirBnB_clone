@@ -41,10 +41,8 @@ class HBNBCommand(cmd.Cmd):
         class_name = class_name.split()[0]
         if not class_name:
             print("** class name missing **")
-            return
         if class_name not in HBNBCommand.valid_classes:
             print("** class doesn't exist **")
-            return
         else:
             new_ins = self.valid_classes[class_name]()
             new_ins.save()
@@ -56,18 +54,14 @@ class HBNBCommand(cmd.Cmd):
         args = input.split()
         if not args:
             print("** class name missing **")
-            return
         elif args[0] not in HBNBCommand.valid_classes:
             print("** class doesn't exist **")
-            return
         elif len(args) == 1:
             print("** instance id missing **")
-            return
         else:
             output = f"{args[0]}.{args[1]}"
             if output not in models.storage.all():
                 print("** no instance found **")
-                return
             else:
                 print(models.storage.all()[output])
 
@@ -76,18 +70,14 @@ class HBNBCommand(cmd.Cmd):
         args = input.split()
         if not args:
             print("** class name missing **")
-            return
         elif args[0] not in HBNBCommand.valid_classes:
             print("** class doesn't exist **")
-            return
         elif len(args) == 1:
             print("** instance id missing **")
-            return
         else:
             output = f"{args[0]}.{args[1]}"
             if output not in models.storage.all():
                 print("** no instance found **")
-                return
             else:
                 del models.storage.all()[output]
                 models.storage.save()
@@ -99,7 +89,6 @@ class HBNBCommand(cmd.Cmd):
         if input:
             if input not in HBNBCommand.valid_classes:
                 print("** class doesn't exist **")
-                return
             else:
                 result = []
                 for k in all_inst.keys():
@@ -115,19 +104,14 @@ class HBNBCommand(cmd.Cmd):
         args = input.split()
         if not args:
             print("** class name missing **")
-            return
         elif args[0] not in HBNBCommand.valid_classes:
             print("** class doesn't exist **")
-            return
         elif len(args) == 1:
             print("** instance id missing **")
-            return
         elif len(args) == 2:
             print("** attribute name missing **")
-            return
         elif len(args) == 3:
             print("** value missing **")
-            return
         else:
             class_name = args[0]
             obj_id = args[1]
@@ -139,7 +123,6 @@ class HBNBCommand(cmd.Cmd):
                 setattr(models.storage.all()[key], attr_name, a_ty(attr_value))
             else:
                 print("** no instance found **")
-                return
 
 
 if __name__ == '__main__':
