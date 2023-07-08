@@ -97,7 +97,7 @@ class HBNBCommand(cmd.Cmd):
                 print(result)
         else:
             for k in all_inst.keys():
-                print(all_inst[k])
+                print(str(all_inst[k]))
 
     def do_update(self, input):
         """ Updates an instance adding/setting an attribute """
