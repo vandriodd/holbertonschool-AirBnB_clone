@@ -91,7 +91,7 @@ class HBNBCommand(cmd.Cmd):
                 print("** class doesn't exist **")
             else:
                 result = []
-                for k in all_inst.keys():
+                for k in all_inst:
                     if str(k).startswith(input):
                         result.append(str(all_inst[k]))
                 print(result)
