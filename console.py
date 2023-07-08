@@ -41,8 +41,10 @@ class HBNBCommand(cmd.Cmd):
         class_name = class_name.split()[0]
         if not class_name:
             print("** class name missing **")
+            return
         if class_name not in HBNBCommand.valid_classes:
             print("** class doesn't exist **")
+            return
         else:
             new_ins = self.valid_classes[class_name]()
             new_ins.save()
@@ -54,10 +56,13 @@ class HBNBCommand(cmd.Cmd):
         args = input.split()
         if not args:
             print("** class name missing **")
+            return
         elif args[0] not in HBNBCommand.valid_classes:
             print("** class doesn't exist **")
+            return
         elif len(args) == 1:
             print("** instance id missing **")
+            return
         else:
             output = f"{args[0]}.{args[1]}"
             if output not in models.storage.all():
@@ -70,10 +75,13 @@ class HBNBCommand(cmd.Cmd):
         args = input.split()
         if not args:
             print("** class name missing **")
+            return
         elif args[0] not in HBNBCommand.valid_classes:
             print("** class doesn't exist **")
+            return
         elif len(args) == 1:
             print("** instance id missing **")
+            return
         else:
             output = f"{args[0]}.{args[1]}"
             if output not in models.storage.all():
@@ -89,6 +97,7 @@ class HBNBCommand(cmd.Cmd):
         if input:
             if input not in HBNBCommand.valid_classes:
                 print("** class doesn't exist **")
+                return
             else:
                 result = []
                 for k in all_inst.keys():
