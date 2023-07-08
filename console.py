@@ -12,7 +12,6 @@ from models.city import City
 from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
-from models.engine.file_storage import FileStorage
 
 
 class HBNBCommand(cmd.Cmd):
@@ -23,25 +22,34 @@ class HBNBCommand(cmd.Cmd):
     prompt = "(hbnb) "
 
     def do_quit(self, input):
-        """ Exits the console """
+        """
+        Exit program
+        Usage: quit
+        """
         return True
 
     def do_EOF(self, input):
-        """ Exits the console """
+        """
+        Exit program on end-of-line (EOF)
+        """
         print()
         return True
 
     def emptyline(self):
-        """ Doesn't do anything when an empty line is passed """
+        """
+        Ignore empty lines
+        """
         pass
 
     def do_create(self, class_name):
-        """ Creates a new instance of a class, saves it to
-        JSON file and prints the id """
+        """
+        Creates and saves a new class instance and prints its id
+        Usage: create <class name>
+        """
         class_name = class_name.split()[0]
         if not class_name:
             print("** class name missing **")
-        if class_name not in HBNBCommand.valid_classes:
+        elif class_name not in HBNBCommand.valid_classes:
             print("** class doesn't exist **")
         else:
             new_ins = self.valid_classes[class_name]()
@@ -49,8 +57,10 @@ class HBNBCommand(cmd.Cmd):
             print(new_ins.id)
 
     def do_show(self, input):
-        """ Prints the string representation of an
-        instance based on the class name """
+        """
+        Prints instance details by class name and id
+        Usage: show <class name> <instance id>
+        """
         args = input.split()
         if not args:
             print("** class name missing **")
@@ -66,7 +76,10 @@ class HBNBCommand(cmd.Cmd):
                 print(models.storage.all()[output])
 
     def do_destroy(self, input):
-        """ Deletes an instance based on the class name and id """
+        """
+        Deletes instance by class name and id
+        Usage: destroy <class name> <instance id>
+        """
         args = input.split()
         if not args:
             print("** class name missing **")
@@ -83,24 +96,29 @@ class HBNBCommand(cmd.Cmd):
                 models.storage.save()
 
     def do_all(self, input):
-        """ Prints all string representation of all instances, based
-        or not on the class name """
+        """
+        Prints string representations of instances by class or all
+        Usage: all <class name>
+        """
         all_inst = models.storage.all()
         if input:
             if input not in HBNBCommand.valid_classes:
                 print("** class doesn't exist **")
             else:
                 result = []
-                for k in all_inst.keys():
+                for k in all_inst:
                     if str(k).startswith(input):
                         result.append(str(all_inst[k]))
                 print(result)
         else:
             for k in all_inst.keys():
-                print(all_inst[k])
+                print(str(all_inst[k]))
 
     def do_update(self, input):
-        """ Updates an instance adding/setting an attribute """
+        """
+        Updates instance attribute by class and id
+        Usage: update <class name> <id> <attribute name> "<attribute value>"
+        """
         args = input.split()
         if not args:
             print("** class name missing **")
