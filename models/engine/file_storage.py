@@ -13,16 +13,16 @@ class FileStorage:
     __objects = {}
 
     def all(self):
-        """ placeholder """
+        """ Retrieve all stored objects """
         return self.__objects
 
     def new(self, obj):
-        """ placeholder """
+        """ Add object to the storage dictionary """
         key = obj.__class__.__name__ + "." + obj.id
         self.__objects[key] = obj
 
     def save(self):
-        """ Serializes """
+        """ Serialize and save objects to JSON file """
         my_dict = {}
         for k, v in self.__objects.items():
             my_dict[k] = v.to_dict()
@@ -30,7 +30,7 @@ class FileStorage:
             json.dump(my_dict, file)
 
     def reload(self):
-        """ placeholder """
+        """ Load and instantiate class instances from JSON """
         from models.base_model import BaseModel
         from models.user import User
         from models.state import State
