@@ -50,6 +50,7 @@ class HBNBCommand(cmd.Cmd):
             class_name = arg.split()[0]
             if class_name not in HBNBCommand.valid_classes:
                 print("** class doesn't exist **")
+                return
             new_ins = self.valid_classes[class_name]()
             new_ins.save()
             print(new_ins.id)
