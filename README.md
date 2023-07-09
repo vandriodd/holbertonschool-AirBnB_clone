@@ -119,12 +119,7 @@ To use the console, follow these steps:
 1. Clone the repository using `git clone https://github.com/vandriodd/holbertonschool-AirBnB_clone` or download the source code.
 2. Ensure that Python3 is installed on your system.
 3. Navigate to the project directory using `cd holbertonschool-AirBnB_clone`.
-4. Run te console script using the Python interpreter:
-``` bash
-./console.py
-```
-
-The console module and its dependencies will be loaded, and you can start interacting with the application!
+4. Start having fun by running the console script!
 
 ### How it works
 As mentioned above, the `console` module allows you to interact with application objects through a command-line interface. It also provides a **non-interactive** mode for automation and scripting.
