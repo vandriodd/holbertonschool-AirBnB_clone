@@ -39,6 +39,17 @@ class test_FileStorage(unittest.TestCase):
         last_version = base2.updated_at
         self.assertNotEqual(first_version, last_version)
 
+    def test_reload_method(self):
+        """ check reload() method """
+        fs4 = FileStorage()
+        base3 = BaseModel()
+        base4 = BaseModel()
+        fs4.save()
+        fs4.reload()
+        all_objs = fs4.all()
+        self.assertIn(base3, all_objs.values())
+        self.assertIn(base4, all_objs.values())
+
 
 if __name__ == '__main__':
     unittest.main()
