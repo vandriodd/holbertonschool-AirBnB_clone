@@ -8,6 +8,7 @@ from models.review import Review
 
 class test_Review(unittest.TestCase):
     """ Tests for Review class """
+
     def test_created(self):
         """ check if an instance is correctly created """
         rev1 = Review()

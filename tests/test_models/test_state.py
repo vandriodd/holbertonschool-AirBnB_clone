@@ -8,6 +8,7 @@ from models.state import State
 
 class test_State(unittest.TestCase):
     """ Tests for State class """
+
     def test_created(self):
         """ check if an instance is correctly created """
         state1 = State()

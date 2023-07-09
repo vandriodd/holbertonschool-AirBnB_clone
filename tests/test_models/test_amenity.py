@@ -8,6 +8,7 @@ from models.amenity import Amenity
 
 class test_Amenity(unittest.TestCase):
     """ Tests for Amenity class """
+
     def test_created(self):
         """ check if an instance is correctly created """
         amenity1 = Amenity()

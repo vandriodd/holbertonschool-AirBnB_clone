@@ -8,6 +8,7 @@ from models.user import User
 
 class test_User(unittest.TestCase):
     """ Tests for User class """
+
     def test_created(self):
         """ check if an instance is correctly created """
         user1 = User()

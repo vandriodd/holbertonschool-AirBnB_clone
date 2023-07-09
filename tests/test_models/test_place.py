@@ -8,6 +8,7 @@ from models.place import Place
 
 class test_Place(unittest.TestCase):
     """ Tests for Place class """
+
     def test_created(self):
         """ check if an instance is correctly created """
         place1 = Place()

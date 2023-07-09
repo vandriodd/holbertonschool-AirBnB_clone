@@ -8,6 +8,7 @@ from models.city import City
 
 class test_City(unittest.TestCase):
     """ Tests for City class """
+
     def test_created(self):
         """ check if an instance is correctly created """
         city1 = City()
