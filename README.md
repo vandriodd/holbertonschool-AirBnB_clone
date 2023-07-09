@@ -143,6 +143,8 @@ To use the console in **non-interactive mode**, you can pipe commands into the s
 echo "help" | ./console.py
 ```
 
+https://github.com/vandriodd/holbertonschool-AirBnB_clone/assets/110431271/9acc46b7-d4a8-43ff-9512-925f17947f52
+
 ### Testing
 Placeholder
 
