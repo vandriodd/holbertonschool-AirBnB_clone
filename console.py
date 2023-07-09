@@ -41,20 +41,20 @@ class HBNBCommand(cmd.Cmd):
         """
         pass
 
-    def do_create(self, class_name):
+    def do_create(self, arg):
         """
         Creates and saves a new class instance and prints its id
         Usage: create <class name>
         """
-        class_name = class_name.split()[0]
-        if not class_name:
-            print("** class name missing **")
-        elif class_name not in HBNBCommand.valid_classes:
-            print("** class doesn't exist **")
-        else:
+        if arg:
+            class_name = arg.split()[0]
+            if class_name not in HBNBCommand.valid_classes:
+                print("** class doesn't exist **")
             new_ins = self.valid_classes[class_name]()
             new_ins.save()
             print(new_ins.id)
+        else:
+            print("** class name missing **")
 
     def do_show(self, input):
         """
