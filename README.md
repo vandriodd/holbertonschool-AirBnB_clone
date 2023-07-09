@@ -113,6 +113,37 @@ Methods:
 Placeholder
 
 ## Usage
+### Installation
+To use the console, follow these steps:
+
+1. Clone the repository using `git clone https://github.com/vandriodd/holbertonschool-AirBnB_clone` or download the source code.
+2. Ensure that Python3 is installed on your system.
+3. Navigate to the project directory using `cd holbertonschool-AirBnB_clone`.
+4. Run te console script using the Python interpreter:
+``` bash
+./console.py
+```
+
+The console module and its dependencies will be loaded, and you can start interacting with the application!
+
+### How it works
+As mentioned above, the `console` module allows you to interact with application objects through a command-line interface. It also provides a **non-interactive** mode for automation and scripting.
+
+To start the console in **interactive mode**, run the following command:
+
+``` bash
+./console.py
+```
+
+Once in the console, you can enter commands and interact with the available functionality.
+
+To use the console in **non-interactive mode**, you can pipe commands into the script or provide commands from a file. For example:
+
+``` bash
+echo "help" | ./console.py
+```
+
+### Testing
 Placeholder
 
 <div align="center">
@@ -128,6 +159,6 @@ Placeholder
 
 <br>
 
-_Last updated: July 8, 2023_
+_Last updated: July 9, 2023_
 
 </div>
