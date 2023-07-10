@@ -157,7 +157,19 @@ echo "help" | ./console.py
 https://github.com/vandriodd/holbertonschool-AirBnB_clone/assets/110431271/9acc46b7-d4a8-43ff-9512-925f17947f52
 
 ### Testing
-Placeholder
+To run the unit tests for the console, you can use the following command:
+
+``` bash
+python3 -m unittest discover tests
+```
+
+This will execute all the tests defined in the `/tests` directory and provide the test results. Ensure that the required dependencies are installed before running the tests.
+
+It is also possible to run the tests in **non-interactive mode** by piping the test command into the script:
+
+``` bash
+echo "python3 -m unittest discover tests" | bash
+```
 
 <div align="center">
 
