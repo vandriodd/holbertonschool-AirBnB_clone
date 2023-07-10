@@ -110,7 +110,23 @@ Methods:
 
 
 ### [/tests](./tests/) directory
-Placeholder
+The test files in the `/test` directory contain test cases for different classes in the project. Each test file focuses on testing specific functionalities of the corresponding class. The test files ensure that the classes are created correctly, have the proper attributes, and important methods work correctly. Here is a summary of each test file:
+
+[test_base_model.py](./tests/test_models/test_base_model.py) - Contains tests for the `BaseModel` class. It verifies instance creation, attributes, attribute types, `save()` and `to_dict()` methods, and attribute update functionality.
+
+[test_file_storage.py](./tests/test_models/test_engine/test_file_storage.py) - Contains tests for the `FileStorage` class. It verifies attributes, `all()`, `save()`, and `reload()` methods.
+
+[test_user.py](./tests/test_models/test_user.py) - Contains tests for the `User` class. It verifies instance creation, attributes, and attribute types.
+
+[test_state.py](./tests/test_models/test_state.py) - Contains tests for the `State` class. It verifies instance creation, attributes, and attribute types.
+
+[test_city.py](./tests/test_models/test_city.py) - Contains tests for the `City` class. It verifies instance creation, attributes, and attribute types.
+
+[test_amenity.py](./tests/test_models/test_amenity.py) - Contains tests for the `Amenity` class. It verifies instance creation, attributes, and attribute types.
+
+[test_place.py](./tests/test_models/test_place.py) - Contains tests for the `Place` class. It verifies instance creation, attributes, and attribute types.
+
+[test_review.py](./tests/test_models/test_review.py) - Contains tests for the `Review` class. It verifies instance creation, attributes, and attribute types.
 
 ## Usage
 ### Installation
