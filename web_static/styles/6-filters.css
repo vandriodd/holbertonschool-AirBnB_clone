@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .container section.filters {
   background-color: white;
   height: 70px;
@@ -24,10 +30,11 @@
 .container section.filters div {
   height: 100%;
   width: 25%;
-  margin: auto 0 0 45px;
+  padding-left: 45px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 
 .locations {
@@ -56,14 +63,32 @@ ul.popover {
   border: 1px solid #dddddd;
   border-radius: 4px;
   list-style: none;
+  margin: 0;
+  padding: 25px;
+  position: absolute;
+  z-index: 1;
+}
+
+section.filters div:hover > ul.popover {
+  display: block;
 }
 
 ul.popover ul {
   list-style: none;
+  padding-left: 20.5px;
+  position: relative;
 }
 
-.container section.filters div:hover > ul.popover {
-  display: block;
+ul.popover li:first-child h2 {
+  margin-top: 0;
+}
+
+ul.popover li h2 {
+  margin-bottom: 5px;
+}
+
+ul.popover ul li {
+  padding-bottom: 5px;
 }
 
 .container section.filters div .popover {
