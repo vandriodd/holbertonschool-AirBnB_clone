@@ -13,10 +13,6 @@ section.places article {
   flex: auto;
 }
 
-section.places article:last-child {
-  flex: auto;
-}
-
 section.places h1 {
   text-align: left;
   font-size: 30px;
