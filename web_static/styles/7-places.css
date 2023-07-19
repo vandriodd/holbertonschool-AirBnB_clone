@@ -1,0 +1,32 @@
+section.places {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  position: relative;
+}
+
+section.places article {
+  width: 390px;
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid #ff5a5f;
+  border-radius: 4px;
+  flex: auto;
+}
+
+section.places article:last-child {
+  flex: none;
+}
+
+section.places h1 {
+  text-align: left;
+  font-size: 30px;
+  padding-left: 15px;
+  flex-basis: 100%;
+}
+
+section.places h2 {
+  font-size: 30px;
+  text-align: center;
+}
